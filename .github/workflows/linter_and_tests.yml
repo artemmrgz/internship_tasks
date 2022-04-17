@@ -34,6 +34,7 @@ jobs:
     - name: Test with unittest
       run: |
         python -m unittest
+        coverage run -m unittest
     - name: Coverage report for CodeClimate
       uses: paambaati/codeclimate-action@v2.7.5
       env:
