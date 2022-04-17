@@ -34,9 +34,11 @@ jobs:
     - name: Test with unittest
       run: |
         python -m unittest
+        coverage run -m unittest
     - name: Coverage report for CodeClimate
       uses: paambaati/codeclimate-action@v2.7.5
       env:
         CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
       with:
         coverageCommand: coverage xml
+        
