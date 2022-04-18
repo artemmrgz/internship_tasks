@@ -1,4 +1,5 @@
 import sys
+from typing import Iterable
 from string import ascii_uppercase, ascii_lowercase, punctuation, digits
 
 
@@ -13,28 +14,28 @@ WEAK_PSW = 'Weak password:'
 STRONG_PSW = 'Strong password'
 
 
-def contains(required_chars, password):
+def contains(required_chars: Iterable[str], password: str) -> bool:
     return any(char in required_chars for char in password)
 
 
-def has_upper_lower(password):
+def has_upper_lower(password: str) -> bool:
     return contains(ascii_uppercase, password) and \
            contains(ascii_lowercase, password)
 
 
-def has_digit(password):
+def has_digit(password: str) -> bool:
     return contains(digits, password)
 
 
-def has_punctuation(password):
+def has_punctuation(password: str) -> bool:
     return contains(punctuation, password)
 
 
-def has_proper_length(password):
+def has_proper_length(password: str) -> bool:
     return len(password) >= LENGTH
 
 
-def checker(password):
+def checker(password: str) -> list:
     criteria = [(has_upper_lower, NO_UPPER_LOWER),
                 (has_punctuation, NO_PUNCTUATION),
                 (has_digit, NO_DIGITS),

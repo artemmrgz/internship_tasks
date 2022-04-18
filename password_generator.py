@@ -4,7 +4,7 @@ from string import ascii_uppercase, ascii_lowercase, punctuation, digits
 LENGTH = 14
 
 
-def generate_password(length):
+def generate_password(length: int) -> str:
     characters = ascii_uppercase + ascii_lowercase + punctuation + digits
     password = list(map(random.choice,
                         (ascii_uppercase, ascii_lowercase, punctuation, digits)
