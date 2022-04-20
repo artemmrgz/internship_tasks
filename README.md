@@ -15,10 +15,11 @@ Password generator - a simple python console program that generates a strong ran
 
 1. Clone the repo
 > git clone https://github.com/artemmrgz/internship_tasks.git
+
 > cd internship_tasks
 
 2. Run program
-> python3 password_checker.py <password>
+> python3 password_checker.py *password*
   
   or
   
