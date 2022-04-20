@@ -19,5 +19,7 @@ Password generator - a simple python console program that generates a strong ran
 
 2. Run program
 > python3 password_checker.py <password>
+  
   or
+  
 > python3 password_generator.py
